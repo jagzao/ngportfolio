@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './shared/components/home/home.component'
-import { AboutComponent } from './shared/components/about/about.component'
+import { AboutComponent } from './modules/about/about/about.component'
 import { ContactComponent } from './shared/components/contact/contact.component'
-import { ProjectComponent } from './shared/components/project/project.component'
+import { ProjectComponent } from './modules/project/project/project.component'
+import { SlideshowComponent } from './shared/components/slideshow/slideshow.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
