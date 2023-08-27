@@ -3,6 +3,7 @@ import { AuthService } from '../../../modules/auth/services/auth.service'
 import { ProjectService } from '../../../modules/project/services/project.service'
 import { User } from '../../../models/usuario.model'
 import { Project } from 'src/app/models/project.model';
+import { Technologies } from 'src/app/models/technologie.model';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,21 @@ export class HomeComponent implements OnInit {
     password: '',
     role: ''
   };
+  technologies: Technologies[] = [
+    { name: "C#", } ,
+    { name: "SQL", } ,
+    { name: "Git", } ,
+    { name: "Azure", } ,
+    { name: "Gitflow", } ,
+    { name: "LINQ",} ,
+    { name: "Entity Framework",} ,
+    { name: "Selenium integration testing",} ,
+    { name: "Angular", } ,
+    { name: "Vue", } ,
+    { name: ".NET Core", } ,
+    { name: "JavaScript", } ,
+    { name: "HTML/CSS"}
+  ];
   projects: Project[] = []
 
   constructor(private userService: AuthService, private projectService: ProjectService) {}
@@ -41,5 +57,4 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-
 }

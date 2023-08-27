@@ -16,13 +16,12 @@ export class AuthService {
     return this.http.get<any[]>(this.apiUrl).pipe(
       map((response: any) => {
         console.log(response);
-        response.data = { id: 1, name: 'Juan Zambrano' }
-        return response.data.map((s: any) => new User(s.id, s.name, s.type, '@', '', 'user' ));
+        return new User(1, 'Juan Zambrano', 'type', '@', '', 'user');
       }),
       catchError((error: any) => {
         console.log(error);
         return throwError(() => error);
       })
     );
-  }
+  }  
 }
